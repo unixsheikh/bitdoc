@@ -1,0 +1,290 @@
+/* MIT License
+
+Copyright (c) 2019 Unix Sheikh
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE */
+
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/includes/fonts/ubuntu-v9-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Ubuntu'),
+       url('/includes/fonts/ubuntu-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/includes/fonts/ubuntu-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/includes/fonts/ubuntu-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/includes/fonts/ubuntu-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/includes/fonts/ubuntu-v9-latin-regular.svg#Ubuntu') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/includes/fonts/ubuntu-mono-v6-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Ubuntu Mono'), local('UbuntuMono-Regular'),
+       url('/includes/fonts/ubuntu-mono-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/includes/fonts/ubuntu-mono-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/includes/fonts/ubuntu-mono-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/includes/fonts/ubuntu-mono-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/includes/fonts/ubuntu-mono-v6-latin-regular.svg#UbuntuMono') format('svg'); /* Legacy iOS */
+}
+
+.col-sm-9 {
+    font-family: 'Ubuntu';
+    font-size: 1em;
+    left: 295px;
+    padding-top: 20px;
+    padding-bottom:50px;
+    padding-right: 50px;
+}
+
+pre[class*="language-"] {
+    font-family: 'Ubuntu Mono';
+    font-size: smaller;
+}
+
+p.rights {
+    margin-top: 20px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #aaa;
+}
+
+iframe {
+    border: 1px solid #aaa;
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+table.content-list td {
+    padding:0 5px;
+}
+
+.posted-by {
+    font-size: smaller;
+    padding:10px 0;
+}
+
+code {
+    color: black;
+    font-weight: bold;
+
+}
+
+.abstract {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+table th, table td {
+    padding:0 5px;
+}
+
+.navbar-fixed-left {
+    padding-top: 20px;
+    width: 285px;
+    position: fixed;
+    border-radius: 0;
+    height: 100%;
+}
+
+.navbar-fixed-left .navbar-nav > li {
+    float: none;  /* Cancel default li float: left */
+    width: 285px;
+}
+
+.navbar-fixed-left + .container {
+    padding-left: 160px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+/*@media screen and (max-width: 767px) {*/
+@media screen and (max-width: 767px) {
+    .sidenav {
+        margin: 0;
+        padding: 0;
+        height: auto;
+        padding: 15px;
+        border-left: 1px solid #ccc;
+        position: relative;
+    }
+    .row.content {height: auto;}
+    .col-sm-9 {
+        padding-top: 0;
+        left: 0;
+    }
+    p.rights {
+        display: none;
+    }
+    .navbar-fixed-left {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .navbar-fixed-left .navbar-nav > li {
+        width: 100%;
+    }
+}
+
+.logo {
+    font-size: 3em;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+    font-family: 'ubuntu';
+    background-color: #233545;
+    /* background-color: #3D4F5D; */
+    height: 100%;
+    color:#ffffff;
+}
+
+.sidenav a {
+    color: white;
+}
+
+.sidenav ul {
+    list-style: none;
+}
+
+.sidenav li {
+    padding: 10px 0;
+}
+
+.glyphicon {
+    padding-right: 10px;
+}
+
+.nav-pills li>a {
+    color: #a8aDb1;
+}
+/*.nav-pills li>a:hover {
+    background-color: #2e455b;
+    color: #ffffff;
+}*/
+.nav-pills li>a:hover {
+    color:#a8aDb1; background:white;
+    -o-transition:color .2s ease-out, background 1s ease-in;
+    -ms-transition:color .2s ease-out, background 1s ease-in;
+    -moz-transition:color .2s ease-out, background 1s ease-in;
+    -webkit-transition:color .2s ease-out, background 1s ease-in;
+    /* ...and now override with proper CSS property */
+    transition:color .2s ease-out, background 1s ease-in;
+}
+
+.nav-pills li>a:hover {
+    color:#ffffff; background:#2e455b;
+}
+
+.navbar-form {
+    padding-bottom: 20px;
+}
+
+.duckduckgo {
+    font-size: smaller;
+    text-align: center;
+    color: #ccc;
+}
+
+.copyright {
+    font-size: smaller;
+    text-align: center;
+}
+
+.powered-by-bitdoc {
+    padding-top: 10px;
+    font-size: smaller;
+    text-align: center;
+    color: #ccc;
+}
+
+.title-comment {
+    font-size: xx-small;
+    font-weight: normal;
+}
+
+.content-comment {
+    font-size: smaller;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+h2 {
+    font-size: 26px;
+    line-height: 40px;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 40px;
+}
+
+h4 {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+h5 {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+h6 {
+    font-size: 10px;
+    line-height: 20px;
+}
+
+blockquote {
+    font-size: 16px;
+    line-height: 20px;
+}
